@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    
 
     <title>Alan G.</title>
     <!-- UNICONS-->
@@ -97,7 +97,7 @@
                              384Q48,332,44,238Q40,144,119.5,102.5Q199,61,284.5,
                              69Q370,77,384,158.5Q398,240,389,328Z" />
 
-                            <image  class="home__blob-img" x="-25" y="60" xlink:href="assets/pngwing.com.png"/>
+                            <image  class="home__blob-img" x="-25" y="60" xlink:href="./images/pngwing.com.png"/>
                         </g>
                     </svg>
                 </div>
@@ -131,7 +131,7 @@
             My introduction
         </span>
         <div class="about__container container grid">
-            <img src="/assets/kayko.jpg" class="about__img">
+            <img src="./images/kayko.jpg" class="about__img">
             <div class="about__data">
                 <p class="about__description">
                     Introducing myself as a entry full stack devolvper that can solve any needed task
@@ -427,7 +427,7 @@
  <!--SCROLL TOP-->
  <!--SWIPER JS-->
 </body>
- <script src="assets/ts/main.js"></script>
+ 
 </html>
 </template>
 
@@ -723,6 +723,7 @@
 }
 
 .home__data{
+    
     grid-column: 1/3;
    
 }
@@ -904,7 +905,7 @@
 
 }
 .skills__html{
-    width: 8    0%;
+    width: 80%;
     
 }
 .skills__css{
