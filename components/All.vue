@@ -7,7 +7,7 @@
     <title>Alan G.</title>
     <!-- UNICONS-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"/>
 
     <!-- SWIPER CSS-->
     <link rel="stylesheet" href="">
