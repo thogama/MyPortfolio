@@ -10,6 +10,6 @@ import All from "../components/All.vue";
 import Ender from "../components/Ender.vue";
 export default {
     name: "IndexPage",
-    components: { All,Ender }
+    components: { All, Ender }
 }
 </script>

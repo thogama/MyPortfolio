@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="">
     
     <!--CSS-->
-    <link rel="stylesheet" href="assets/styles.css">
+    
 
 
     <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -24,7 +24,7 @@
      <nav class="nav conteiner">
          <a href="" class="nav__logo">Alan Gama</a>
 
-         <div class="nav__menu" id="nav-menu">
+         <div class="nav__menu"  id="nav-menu" ref="nav_menu">
              <ul class="nav__list grid">
                  <li class="nav__item">
                       <a href="#home" class="nav__link">
@@ -57,11 +57,11 @@
                 </a>
                 </li>                 
              </ul>
-             <i class="uil uil-sign-out-alt nav__close" id="nav-close"></i>
+             <i class="uil uil-sign-out-alt nav__close" id="nav-close" ref="nav_close"></i>
          </div>
 
          <div class="nav__btns">
-             <div class="nav__toggle" id="nav-toggle">
+             <div class="nav__toggle" id="nav-toggle" ref="nav_toggle">
                 <i class="uil uil-apps"></i>
              </div>
          </div>
@@ -139,7 +139,7 @@
                 <div class="about__info">
                     <div>
                         <span class="about__info-title">30h/week</span>
-                        <span class="about__info-name">Yours <br> availability</span>
+                        <span class="about__info-name">Hours <br> availability</span>
                     </div>
                     <div>
                         <span class="about__info-title">English</span>
@@ -161,12 +161,10 @@
     </section>
     <section class="skills section" id="skills">
         <h2 class="section__title"> Skills</h2>
-            <span class="section__subtitle">
-                My technical abilities
-            </span>
+            <span class="section__subtitle">My technical abilities</span>
 
             <div class="skills__container container grid">
-                <div>
+                
                     <!--skill 1-->
                     <div class="skills__content ">
                         <div class="skills__header">
@@ -215,7 +213,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    
                     <!--skill 2-->
                     <div class="skills__content ">
                         <div class="skills__header">
@@ -271,8 +269,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                
+            
     </section>
 
 
@@ -431,8 +429,64 @@
 </html>
 </template>
 
+
 <script>
+
+export default {
+  mounted() {
+    
+        /* ==================== MENU SHOW Y HIDDEN ============== */
+    const navMenu = this.$refs.nav_menu
+    
+
+    const  navToggle = this.$refs.nav_toggle
+    const navClose = this.$refs.nav_close
+
+
+    /*SHOW */
+
+    if(navToggle){
+        navToggle.addEventListener("click",()=>{
+            
+            navMenu.classList.add("show-menu")
+        })
+        
+    } 
+
+    if(navClose){
+        navClose.addEventListener("click",()=>{
+            navMenu.classList.remove("show-menu")
+        })
+    }
+
+    /* Remove menu mobile */ 
+
+    const modalViews = document.querySelectorAll(".services__modal")
+    const modalBtns = document.querySelectorAll(".services__button")
+    const modalCloses = document.querySelectorAll(".services__modal-close")
+
+    let modal = function(modalClick){
+        modalViews[modalClick].classList.add("active-modal")
+    }
+
+    modalBtns.forEach((modalBtn, i) => {
+        modalBtn.addEventListener("click", ()=>{
+            modal(i)
+        })
+    })
+
+    modalCloses.forEach((modalClose) =>{
+        modalClose.addEventListener("click",()=>{
+            modalViews.forEach((modalView) =>{
+                modalView.classList.remove("active-modal")
+            })
+        })
+    })
+        
+    }
+}
 </script>
+
 
 <style>
 /*================= Google Fonts =====================*/
