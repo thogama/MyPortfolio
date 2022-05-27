@@ -97,7 +97,7 @@
                              384Q48,332,44,238Q40,144,119.5,102.5Q199,61,284.5,
                              69Q370,77,384,158.5Q398,240,389,328Z" />
 
-                            <image  class="home__blob-img" x="-25" y="60" xlink:href="./images/pngwing.com.png"/>
+                            <image  class="home__blob-img"  x="-15" y="35" xlink:href="./images/busto.png"/>
                         </g>
                     </svg>
                 </div>
@@ -131,7 +131,7 @@
             My introduction
         </span>
         <div class="about__container container grid">
-            <img src="./images/kayko.jpg" class="about__img">
+            <img src="./images/foto-perfil.png" class="about__img">
             <div class="about__data">
                 <p class="about__description">
                     Introducing myself as a entry full stack devolvper that can solve any needed task
@@ -858,10 +858,23 @@ export default {
     color: var(--first-color-alt);
 }
 /*======== ABOUT ===== */
+@keyframes slidein {
+  from {
+    
+  }
+
+  to {
+    transform: rotateZ(15deg);
+  }
+}
 .about__img{
     width: 200px;
-    border-radius:.5rem;
+    border-radius:7rem;
     justify-self: center;
+   
+}
+.about__img:hover{
+    animation: slidein 0.3s alternate infinite;
 }
 .about__description{
      text-align: center;
