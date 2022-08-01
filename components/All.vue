@@ -97,7 +97,7 @@
                              384Q48,332,44,238Q40,144,119.5,102.5Q199,61,284.5,
                              69Q370,77,384,158.5Q398,240,389,328Z" />
 
-                            <image  class="home__blob-img"  x="-15" y="35" xlink:href="./images/busto.png"/>
+                            <image  class="home__blob-img"  x="-15" y="35" xlink:href="./images/IA-59 (1).jpg"/>
                         </g>
                     </svg>
                 </div>
